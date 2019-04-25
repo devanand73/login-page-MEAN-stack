@@ -1,7 +1,8 @@
-constant express = require('express');
-constant app = express();
+const express = require('express');
+const app = express();
+const path = require('path');
 app.use(express.static(--__dirname + '/dist'));
-app.listen(process.env.PORT ||8080);
+app.listen(process.env.PORT || 8080);
 
 //pathLocationStrategy
 app.get('/*',function(req,res){
